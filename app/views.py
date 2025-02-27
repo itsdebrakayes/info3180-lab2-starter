@@ -7,27 +7,24 @@ from datetime import datetime
 # Routing for your application.
 ###
 
+
 def format_date_joined(date):
     return date.strftime("%B, %Y")
 
 @app.route('/profile')
 def profile():
-    # Fake profile data
     profile_data = {
-        'full_name': 'Debra-Kaye Smith',
-        'username': 'itsdebra',
-        'location': 'Kingston, Jamaica',
-        'date_joined': datetime(2021, 2, 7),
-        'bio': 'I love coding and building cool projects!',
-        'posts': 25,
-        'followers': 100,
-        'following': 50
+        'full_name': 'Mary Jane',  # Update full name
+        'username': 'mjane',  # Update username
+        'location': 'Kingston, Jamaica',  # Update location
+        'date_joined': datetime(2018, 1, 1),  # Update date joined
+        'bio': 'I am a smart and talented young woman who loves website design and development. Contact me if you\'d like to work together on a new project.',  # Update bio
+        'posts': 7,  # Update number of posts
+        'followers': 250,  # Update number of followers
+        'following': 100  # Update number of following
     }
-    # Format the date joined
     profile_data['date_joined'] = format_date_joined(profile_data['date_joined'])
-    return render_template('profile.html', **profile_data)
-
-@app.route('/')
+    return render_template('profile.html', **profile_data)@app.route('/')
 def home():
     """Render website's home page."""
     return render_template('home.html')
