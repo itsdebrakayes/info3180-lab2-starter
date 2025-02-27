@@ -14,8 +14,8 @@ def format_date_joined(date):
 def profile():
     # Fake profile data
     profile_data = {
-        'full_name': 'John Doe',
-        'username': 'johndoe',
+        'full_name': 'Debra-Kaye Smith',
+        'username': 'itsdebra',
         'location': 'Kingston, Jamaica',
         'date_joined': datetime(2021, 2, 7),
         'bio': 'I love coding and building cool projects!',
